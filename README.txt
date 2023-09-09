@@ -29,61 +29,6 @@ Function        -> ID
 
 Examples:
 
-Richard has at least two brothers ->
-There exists an x and a y such that x is a bother of richard and y is a brother
-of richard but x and y are different.
-
-exists x, y Brother(x, Richard) + Brother(y, Richard) + -(x = y)
-
-Sentence
-  Quantifier
-    exists
-  Variable
-    ID (x)
-  Variable
-    ID (y)
-  Sentence
-    ComplexSentence (+)
-      Sentence
-        AtomicSentence
-          Predicate
-            ID (Brother)
-          Term
-            Variable
-              ID (x)
-          Term
-            Constant
-              ID (Richard)
-      Sentence
-        ComplexSentence (+)
-          Sentence
-            AtomicSentence
-              Predicate
-                ID (Brother)
-              Term
-                Variable
-                  ID (x)
-              Term
-                Constant
-                  ID (Richard
-          Sentence
-            ComplexSentence (-)
-              Sentence
-                ComplextSentence ( () )
-                  Sentence
-                    AtomicSentence (=)
-                      Term
-                        Variable
-                          Id (x)
-                      Term
-                        Variable
-                          Id (y)
-
-                
-
-          
-
-
 "True" Is parsed as
 Sentence
   AtomicSentence
@@ -226,3 +171,53 @@ Sentence
     Term
       Constant
         ID (Henry)
+
+Richard has at least two brothers ->
+There exists an x and a y such that x is a bother of richard and y is a brother
+of richard but x and y are different.
+
+exists x, y Brother(x, Richard) + Brother(y, Richard) + -(x = y)
+
+Sentence
+  Quantifier
+    exists
+  Variable
+    ID (x)
+  Variable
+    ID (y)
+  Sentence
+    ComplexSentence (+)
+      Sentence
+        AtomicSentence
+          Predicate
+            ID (Brother)
+          Term
+            Variable
+              ID (x)
+          Term
+            Constant
+              ID (Richard)
+      Sentence
+        ComplexSentence (+)
+          Sentence
+            AtomicSentence
+              Predicate
+                ID (Brother)
+              Term
+                Variable
+                  ID (x)
+              Term
+                Constant
+                  ID (Richard
+          Sentence
+            ComplexSentence (-)
+              Sentence
+                ComplextSentence ( () )
+                  Sentence
+                    AtomicSentence (=)
+                      Term
+                        Variable
+                          Id (x)
+                      Term
+                        Variable
+                          Id (y)
