@@ -1,0 +1,6 @@
+true
+false
+true = true
+Richard = John
+Brother(Richard, John)
+Married(Father(Richard), Mother(John))
